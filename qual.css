@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    width: 100%;
+    background-color: #6ba9b5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #477078;
+}
+
+.header {
+    width: 100%;
+    height: 50%;
+    background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 40px;
+    /* border: 3px solid #ffff00; */
+}
+
+
+.textbox {
+    background-color: #2e3331;
+    color: #ffffff;
+    opacity: 90%;
+    border-radius: 5px;
+    /* border: 3px solid pink; */
+    width: 400px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.textbox p {
+    margin: 20px;
+}
+
+.text2 {
+    background-color: #6ba9b5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 3px solid red; */
+}
+
+.resume-bar {
+    width: 90%;
+    padding: 10px;
+    background-color: #477078;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#pdfViewer {
+    display: none;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.resume-bar:hover {
+    background-color: #35535a;
+}
+
+.text2-2 {
+    height: 500px;
+}
