@@ -20,15 +20,23 @@ html {
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 .menu a {
     color: #ffffff;
-    text-align: center;
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+
+#left {
+    justify-content: flex-start;
+}
+
+#right {
+    justify-content: flex-end;
 }
 
 .menu a:hover {
@@ -116,4 +124,8 @@ html {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
+}
+
+#block1 {
+    display: none;
 }

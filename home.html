@@ -5,24 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="home.css">
+    <link id="theme" rel="stylesheet" href="home.css">
 </head>
 
 <body>
     <div class="menu">
-        <a href="home.html">home</a>
-        <a href="portfolio.html">portfolio</a>
-        <a href="qual.html">qualifications</a>
-        <a href="service.html">service</a>
-        <a href="ai.html">AI</a>
+        <div id="left"><a href="home.html">home</a>
+            <a href="portfolio.html">portfolio</a>
+            <a href="qual.html">qualifications</a>
+            <a href="service.html">service</a>
+            <a href="ai.html">AI</a>
+        </div>
+        <div id="right"> <a onclick="switchStyle()">Switch styles!</a>
+        </div>
     </div>
     <div class="header">
-        <div class="textbox">
+
+        <div class="textbox s2hide" id="s2hide">
             <h2 id="home-title">Welcome!</h2>
             <p>Hello, you've landed on the homepage of my website! My name is Hannah Lucas, and I am a junior in
                 Computer Science at Texas A&M University.</p>
         </div>
+        <div id="sidebar2">
 
+        </div>
+        <canvas id="block1">
+        </canvas>
     </div>
     <div class="text2">
         <div class="text2-1">
@@ -35,6 +43,7 @@
             <p class="p2-1"><a href="">link4</p>
         </div>
     </div>
+    <script src="script.js"></script>
 
 </body>
 
