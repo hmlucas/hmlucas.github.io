@@ -116,6 +116,6 @@ canvas {
 
 #desc {
     text-align: left;
-    text-indent: 30px;
+    /* text-indent: 30px; */
     /* border: 3px solid yellow; */
 }

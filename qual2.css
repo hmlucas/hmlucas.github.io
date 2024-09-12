@@ -16,6 +16,70 @@ html {
     display: none;
 }
 
+.main {
+    background-color: #E4F0D0;
+    flex-grow: 1;
+    padding: 50px;
+}
+
+.box2 {
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: center;
+}
+
+.sbar {
+    border: 2px solid #435d53;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #C2D8B9;
+    color: black;
+    text-align: center;
+    /* border: 3px solid yellow; */
+    display: block;
+}
+
+.sbar a {
+    text-decoration: none;
+    color: #3a5148;
+}
+
+.box2 {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: center;
+    background-color: #C2D8B9;
+    border: 2px solid #557b80;
+    padding: 30px;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text2-1img {
+    flex-grow: 1;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    height: 20px;
+    font-size: 20px;
+    margin: 5px 0px;
+    margin-bottom: 10px;
+}
+
 .menu a:hover {
     background-color: #97bcd1;
 }
@@ -35,7 +99,7 @@ html {
 #block1 {
     background-color: #E4F0D0;
     flex-grow: 1;
-    height: 100vh;
+    /* height: auto; */
     display: flex;
     z-index: 2;
 }
@@ -45,12 +109,13 @@ canvas {
     height: 100%;
     width: 100%;
     /* border: 3px solid blue; */
+    border-bottom: 2px solid #33463f;
 }
 
 .header {
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: auto;
 }
 
 #sidebar2 {
@@ -80,7 +145,6 @@ canvas {
 
 .textbox p {
     margin: 20px;
-    text-align: center;
 }
 
 .p2-1 {
@@ -108,7 +172,7 @@ canvas {
     float: none;
 } */
 
-#subtitle {
+.subtitle {
     font-size: 18px;
     font-weight: bold;
     color: #33463f;
@@ -118,4 +182,12 @@ canvas {
     text-align: left;
     text-indent: 30px;
     /* border: 3px solid yellow; */
+}
+
+#pdfViewer {
+    display: none;
+    width: 90%;
+    height: 1000px;
+    margin: 10px auto;
+    border: none;
 }

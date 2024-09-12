@@ -1,4 +1,3 @@
-
 function box(box_id, page_id, x, y, w, h, r, color, vx, vy, txt_color, text) {
     this.box_id = box_id;
     this.page_id = page_id;
@@ -53,8 +52,15 @@ function tile(context, box) {
     //box text pos center
     const textX = x + w / 2;
     const textY = y + h / 2;
-    context.fillText(box.text, textX, textY);
-
+    const line_h = 25;
+    if (Array.isArray(box.text)) {
+        newY = textY - (line_h / box.text.length);
+        box.text.forEach((line, i) => {
+            context.fillText(line, textX, newY + (i * line_h));
+        });
+    } else {
+        context.fillText(box.text, textX, textY);
+    }
 }
 function drawBoxes() {
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -128,15 +134,32 @@ function generateCoords(box1) {
 function makeBoxes() {
     console.log("makeBoxes() called");
     let selected = pg.box_info;
+    let b_width = [150, 225, 350];
+    let b_height = [60, 100];
+    let w = b_width[0];
+    let h = b_height[0];
     selected.forEach((info, i) => {
-        let box1 = new box(i, pg.id, 0, 0, 150, 60, 10, "#C2D8B9", (Math.random() + 0.05), (Math.random() + 0.05), "black", info.text);//placeholder x and y
+        let color = "#C2D8B9";
+        w = b_width[0];//can make this dynamic later ig
+        if (info.text.length > 10) {
+            w = b_width[1];
+        }
+        if (info.text.length > 20) {
+            w = b_width[2];
+        }
+        if (info.text === "Switch Styles!") {
+            color = "#e6f2da";
+        }
+        let box1 = new box(i, pg.id, 0, 0, w, 60, 10, color, (Math.random() + 0.2), (Math.random() + 0.2), "black", info.text);//placeholder x and y
         generateCoords(box1);
         console.log(box1);
         (pg.boxes).push(box1);
     })
-    let box2 = new box(5, pg.id, 0, 0, 300, 100, 10, "#f0f7e9", 0.5, 0.5, "black", "Hello! Click a box to explore.");
-    generateCoords(box2);
-    (pg.boxes).push(box2);
+    if (pg.desc_box !== "") {
+        let box2 = new box(5, pg.id, 0, 0, 300, 100, 10, "#f0f7e9", 0.5, 0.5, "black", pg.desc_box);
+        generateCoords(box2);
+        (pg.boxes).push(box2);
+    }
 }
 
 function isPointInBox(x, y, box) {
@@ -168,6 +191,16 @@ function onBoxClick(event) {
             let i = box_txt.findIndex(text => text === box.text);
             if (i === -1) {
                 console.log("page not found");
+            } else if (box_links[i].startsWith("#")) {
+                console.log("box_links = " + box_links);
+                console.log("box_links[i] = " + box_links[i]);
+                const div_id = box_links[i].substring(1);//get rid of #
+                const selected_div = document.getElementById(div_id);
+                if (div_id == "pdf") {
+                    togglePDF();
+                }
+                selected_div.scrollIntoView();
+                console.log("moving to element with id = " + div_id);
             } else {
                 window.location.href = box_links[i];
             }

@@ -10,25 +10,37 @@
 
 <body>
     <div class="menu">
-        <a href="home.html">home</a>
-        <a href="portfolio.html">portfolio</a>
-        <a href="qual.html">qualifications</a>
-        <a href="service.html">service</a>
-        <a href="ai.html">AI</a>
+        <div id="left"><a href="home.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="qual.html">Qualifications</a>
+            <a href="service.html">Service</a>
+            <a href="ai.html">AI</a>
+        </div>
+        <div id="right"> <a onclick="switchStyle()">Switch styles!</a>
+        </div>
     </div>
     <div class="header">
         <div id="sidebar2" class="textbox">
             <h2 id="home-title">Portfolio</h2>
-            <p>Projects have greatly improved my professional and interpersonal skills. I
+            <p id="desc">Projects have greatly improved my professional and interpersonal skills. I
                 appreciate
                 getting to obtain hands-on experience outside of school. Here are some of my favorite projects!</p>
+            <div class=" text2-12 s1hide">
+                <p class="subtitle sbar"><a href="home.html">Home</a></p>
+                <p class="sbar"><a href="portfolio.html">Portfolio</a></p>
+                <p class="sbar"><a href="qual.html">Qualifications</a></p>
+                <p class="sbar"><a href="service.html">Service</a></p>
+                <p class="sbar"><a href="ai.html">AI</a></p>
+                <p class="sbar"><a href="contact.html">Contact me!</a></p>
+
+            </div>
         </div>
         <canvas id="block1">
         </canvas>
     </div>
     </div>
     <div class="text2">
-        <div class="box2">
+        <div class="box2" id="drones">
             <div class="text2-1">
                 <h3>Drone Connections</h3>
                 <p class="p2-1">In the Summer of 2023, I had the privilege of interning for Eve Vehicles, a drone
@@ -38,27 +50,49 @@
                     exciting! This was difficult in the beginning because I didn't have much experience with the
                     technologies they
                     were using. I wanted to avoid weighing down a team that had much more work than they had employees
-                    (the engineering team was 3 people! &lt;insert joke about startup life&gt;). I am proud that I was
+                    (the engineering team was 3 people!). I am proud that I was
                     able to become self-sufficient in the technologies being used, and made concrete contributions to
                     the future of the project. I constructed the whole pipeline of flight log retrieval, which spanned
                     from automating the log retrieval from the flight controller's companion computer to adding features
                     to the UI that allowed for easy and efficient access to the logs.</p>
 
             </div>
-            <div class=" text2-1img">
-                <img src="drone.png" alt="A picture of the drone in its nest">
-                <p id="caption">An image of the drone in its nest <a href="https://www.evevehicles.com/technology">
-                        (source)</p>
+            <div class="text2-1">
+                <div class=" text2-1img">
+                    <img src="drone.png" alt="A picture of the drone in its nest">
+                    <p class="caption">An image of the drone in its nest <a
+                            href="https://www.evevehicles.com/technology">(source)</a>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="box2">
+        <div class="box2" id="store">
             <div class="text2-1">
-                <h3>Project 1</h3>
-                <p class="p2-1">project description</p>
-
+                <div class=" text2-1img">
+                    <img src="https://www.exasol.com/app/uploads/2023/12/thumbnail-what-is-a-relational-database.webp"
+                        alt="desc">
+                    <p class="caption"><a
+                            href="https://www.exasol.com/app/uploads/2023/12/thumbnail-what-is-a-relational-database.webp">(source)</a>
+                    </p>
+                </div>
             </div>
             <div class=" text2-1">
-
+                <h3>Store Management System</h3>
+                <p class="p2-1">I took a class in databases (CSCE 310) last semester, and I gained a lot of insight into
+                    the
+                    importance and types of data management in applications. For my final project, I created a store
+                    management system and its associated GUI for accessible modification and viewing of the database's
+                    contents. The GUI included customer and employee views, so it could handle operations involving both
+                    of those groups. Customer operations included placing orders, which would then update the inventory
+                    accessible through the employee view. The employee view allowed for the management of inventory,
+                    staffing, suppliers, customers, and other relevant categories. The system was structured so that my
+                    Java program would execute queries on my database, which integrated Redis, based on user input. I
+                    used a docker
+                    container to set up and
+                    maintain a web server, which generated an html page containing the query results. The results could
+                    be viewed in either the application or online. Implementing this project taught me more about the
+                    relationships between the front and back-end of application development, and strengthened my
+                    knowledge of database management.</p>
             </div>
         </div>
     </div>

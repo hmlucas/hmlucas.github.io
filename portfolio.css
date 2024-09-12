@@ -52,14 +52,16 @@ html {
     color: #ffffff;
     opacity: 90%;
     border-radius: 5px;
-    width: 400px;
-    height: 280px;
+    max-width: 400px;
+    /* height: auto; */
+    min-height: 220px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .textbox p {
     margin-top: 20px;
+    text-indent: 30px;
 }
 
 .text2 {
@@ -71,6 +73,11 @@ html {
     gap: 20px;
 }
 
+.caption {
+    text-decoration: none;
+    color: black;
+}
+
 .box2 {
     border-radius: 5px;
     width: 100%;
@@ -78,7 +85,7 @@ html {
     flex-direction: row;
     padding: 2%;
     justify-content: center;
-    height: 500px;
+    height: 600px;
 }
 
 .text2-1 {
@@ -86,34 +93,40 @@ html {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-
+    border: 2px solid #598c96;
     width: 50%;
     margin: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     height: 100%;
 }
 
 
-
+.p2-1 {
+    padding: 10px;
+    padding-top: 0px;
+    text-indent: 40px;
+    line-height: 1.5;
+}
 
 .text2-1 h3 {
     color: white;
     font-size: 20px;
     margin: 10px;
-
+    text-align: center;
+    padding-top: 10px;
 }
 
 .text2-1 p {
     color: white;
     font-size: 16px;
     margin: 10px;
-    text-indent: 3em;
+    /* text-indent: 3em; */
 }
 
 
 .text2-1img {
     background-color: #6ba9b5;
-    border-radius: 5px;
+    /* border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,24 +136,66 @@ html {
     box-sizing: border-box;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin: 10px;
+    margin: 10px; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    /* border: 2px solid #598c96; */
 }
 
 .text2-1img img {
-    max-width: 100%;
+    /* max-width: 100%;
     max-height: 100%;
     height: auto;
     width: auto;
-    object-fit: contain;
+    object-fit: contain; */
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 20px;
 }
 
 #caption {
     padding-top: 10px;
     text-align: center;
     color: white;
+    width: auto;
 }
 
-#caption a {
-    color: white;
-    text-decoration: underline;
+.s1hide {
+    display: none;
+}
+
+.menu {
+    width: 100%;
+    background-color: #6ba9b5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.menu a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#left {
+    justify-content: flex-start;
+}
+
+#right {
+    justify-content: flex-end;
 }

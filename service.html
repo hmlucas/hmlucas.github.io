@@ -4,29 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service</title>
+    <title>Portfolio</title>
     <link id="theme" rel="stylesheet" href="service.css">
 </head>
 
 <body>
     <div class="menu">
-        <a href="home.html">home</a>
-        <a href="portfolio.html">portfolio</a>
-        <a href="qual.html">qualifications</a>
-        <a href="service.html">service</a>
-        <a href="ai.html">AI</a>
-    </div>
-    <div class="header">
-        <div class="textbox">
-            <h2 id="home-title">Service</h2>
-            <p>I'd like to get more involved in local service projects at A&M and in my community. I enjoy helping
-                people with their schoolwork and being a good general resource for those around me. Overall, my main
-                goal is to be able to affect others' lives in a positive way.</p>
+        <div id="left"><a href="home.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="qual.html">Qualifications</a>
+            <a href="service.html">Service</a>
+            <a href="ai.html">AI</a>
+        </div>
+        <div id="right"> <a onclick="switchStyle()">Switch styles!</a>
         </div>
     </div>
-    <div>
-        One service activity I want to get involved in is peer tutoring. I think it will allow me to help people around
-        me and also help me become more knowledgeable.
+    <div class="header">
+        <div id="sidebar2" class="textbox">
+            <h2 id="home-title">Service</h2>
+            <p id="desc">Projects have greatly improved my professional and interpersonal skills. I
+                appreciate
+                getting to obtain hands-on experience outside of school. Here are some of my favorite projects!</p>
+            <div class=" text2-12 s1hide">
+                <p class="subtitle sbar"><a href="home.html">Home</a></p>
+                <p class="sbar"><a href="portfolio.html">Portfolio</a></p>
+                <p class="sbar"><a href="qual.html">Qualifications</a></p>
+                <p class="sbar"><a href="service.html">Service</a></p>
+                <p class="sbar"><a href="ai.html">AI</a></p>
+                <p class="sbar"><a href="contact.html">Contact me!</a></p>
+
+            </div>
+        </div>
+        <canvas id="block1">
+        </canvas>
+    </div>
+    </div>
+    <div class="text2">
+        <div class="box2" id="environment">
+            <div class="text2-1">
+                <h3>Environment & Community</h3>
+                <p class="p2-1">I'd like to get more involved in caring for the local environment. This includes
+                    environmental sustainability measures, like recycling or clearing up littering, and caring for the
+                    community around me. I participated in Big Event last year, and it felt like a way of giving back to
+                    my local environment and community. I have been a member of the knitting club, and we do 1 service
+                    project a semester. I'd like to get more involved in my community beyond these activities in the
+                    future.</p>
+
+            </div>
+            <div class="text2-1">
+                <div class=" text2-1img">
+                    <img src="https://bloximages.chicago2.vip.townnews.com/myaggienation.com/content/tncms/assets/v3/editorial/e/8b/e8b292f8-0b61-11e3-adf4-0019bb2963f4/52166838e3a0b.image.jpg"
+                        alt="A picture of the drone in its nest">
+                    <p class="caption"><a
+                            href="https://bloximages.chicago2.vip.townnews.com/myaggienation.com/content/tncms/assets/v3/editorial/e/8b/e8b292f8-0b61-11e3-adf4-0019bb2963f4/52166838e3a0b.image.jpg">(source)</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box2" id="academic">
+            <div class="text2-1">
+                <div class=" text2-1img">
+                    <img src="https://www.ecampusnews.com/files/2018/10/2799-600x400.jpeg" alt="desc">
+                    <p class="caption"><a
+                            href="https://www.ecampusnews.com/files/2018/10/2799-600x400.jpeg">(source)</a>
+                    </p>
+                </div>
+            </div>
+            <div class=" text2-1">
+                <h3>Academics</h3>
+                <p class="p2-1">One of the ways I want to give back to my community is helping others learn. I enjoy
+                    teaching people new concepts, and it also improves my own understanding of them. I'd like to get
+                    more
+                    formally involved in this by becoming a peer teacher next semester. My goal is to make a positive
+                    difference in others' lives and aid their learning journey.</p>
+            </div>
+        </div>
     </div>
     <script src="page.js"></script>
     <script src="canvas.js"></script>
