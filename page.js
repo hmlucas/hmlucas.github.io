@@ -7,7 +7,7 @@ function page(id, name, box_info, boxes, desc_box) {
 }
 
 let pages = [
-    new page(0, "home",
+    new page(0, "index",
         [
             { text: "Portfolio", link: "portfolio.html" },
             { text: "Qualifications", link: "qual.html" },
@@ -43,7 +43,7 @@ function getPage(page_id) {
 function getPageName() {
     const url = window.location.href;
     const pageName = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.'));
-    return pageName;  // ex. returns home if pg is home.html
+    return pageName;  // ex. returns home if pg is index.html
 }
 
 function getPageID() {

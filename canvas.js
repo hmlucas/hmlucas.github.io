@@ -207,7 +207,7 @@ function onBoxClick(event) {
         }
     });
     // if (!clicked) {
-    //     window.location.href = "home.html";
+    //     window.location.href = "index.html";
     // }
 }
 canvas.addEventListener('click', onBoxClick);
