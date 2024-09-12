@@ -105,6 +105,9 @@ function collide(box1, box2) {
 }
 
 function animate() {
+    if (pg.boxes.length === 0) {
+        makeBoxes();
+    }
     move();
     drawBoxes();
     requestAnimationFrame(animate);
