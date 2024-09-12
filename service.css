@@ -199,3 +199,7 @@ html {
 #right {
     justify-content: flex-end;
 }
+
+.p2-1 a {
+    color: white;
+}
